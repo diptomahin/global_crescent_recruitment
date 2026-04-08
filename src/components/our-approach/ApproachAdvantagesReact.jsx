@@ -1,19 +1,20 @@
 import useAos from '../../hooks/useAos'
+import { Zap, Target, Briefcase, MessageSquare, BarChart3, Heart } from 'lucide-react'
 
 const advantages = [
-  'Faster turnaround through clearer workflows',
-  'More relevant candidate matching',
-  'Industry-aware sourcing decisions',
-  'Better communication between stakeholders',
-  'A practical balance of speed and quality',
-  'Long-term support after placement',
+  { label: 'Faster turnaround through clearer workflows', icon: Zap },
+  { label: 'More relevant candidate matching', icon: Target },
+  { label: 'Industry-aware sourcing decisions', icon: Briefcase },
+  { label: 'Better communication between stakeholders', icon: MessageSquare },
+  { label: 'A practical balance of speed and quality', icon: BarChart3 },
+  { label: 'Long-term support after placement', icon: Heart },
 ]
 
 export default function ApproachAdvantagesReact() {
   useAos()
 
   return (
-    <section className="bg-[linear-gradient(180deg,#f6efe8_0%,#ffffff_100%)] py-20">
+    <section className="bg-[linear-gradient(180deg,#f5efe8_0%,#ffffff_100%)] py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div data-aos="fade-right">
@@ -27,16 +28,22 @@ export default function ApproachAdvantagesReact() {
             </div>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            {advantages.map((advantage, index) => (
+            {advantages.map((advantage, index) => {
+              const Icon = advantage.icon
+              return (
               <div
-                key={advantage}
+                key={advantage.label}
                 data-aos="zoom-in-up"
                 data-aos-delay={index * 80}
                 className="rounded-[24px] bg-white p-6 shadow-[0_15px_38px_rgba(0,0,0,0.06)] transition hover:-translate-y-1 hover:shadow-[0_22px_44px_rgba(0,0,0,0.1)]"
               >
-                <p className="font-medium text-gray-800">{advantage}</p>
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#D60000]/15 to-[#D60000]/5">
+                  <Icon size={22} className="text-[#D60000]" strokeWidth={2.2} />
+                </div>
+                <p className="font-medium text-gray-800">{advantage.label}</p>
               </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </div>

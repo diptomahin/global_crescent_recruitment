@@ -11,7 +11,7 @@ export default function HomeStrategiesReact() {
   useAos()
 
   return (
-    <section className="bg-[linear-gradient(180deg,#f6f1ec_0%,#ffffff_100%)] py-20">
+    <section className="bg-[linear-gradient(180deg,#f5efe8_0%,#ffffff_100%)] py-20">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
         <div data-aos="fade-right">
           <div className="mb-5 inline-flex rounded-full border border-[#D60000]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#D60000] shadow-sm">

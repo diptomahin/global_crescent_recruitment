@@ -1,19 +1,20 @@
 import useAos from '../../hooks/useAos'
+import { Users, Filter, Clipboard, UserCheck, MapPin, MessageSquare } from 'lucide-react'
 
 const services = [
-  'Talent sourcing and recruitment',
-  'Candidate screening and role matching',
-  'Documentation and workflow coordination',
-  'Onboarding support',
-  'Accommodation and mobility guidance',
-  'Ongoing post-placement communication',
+  { label: 'Talent sourcing and recruitment', icon: Users },
+  { label: 'Candidate screening and role matching', icon: Filter },
+  { label: 'Documentation and workflow coordination', icon: Clipboard },
+  { label: 'Onboarding support', icon: UserCheck },
+  { label: 'Accommodation and mobility guidance', icon: MapPin },
+  { label: 'Ongoing post-placement communication', icon: MessageSquare },
 ]
 
 export default function EmployersServicesReact() {
   useAos()
 
   return (
-    <section className="bg-[linear-gradient(180deg,#f6f0ea_0%,#ffffff_100%)] py-20">
+    <section className="bg-[linear-gradient(180deg,#f5efe8_0%,#ffffff_100%)] py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div data-aos="fade-right">
@@ -27,16 +28,22 @@ export default function EmployersServicesReact() {
             </div>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            {services.map((service, index) => (
+            {services.map((service, index) => {
+              const Icon = service.icon
+              return (
               <div
-                key={service}
+                key={service.label}
                 data-aos="zoom-in-up"
                 data-aos-delay={index * 90}
                 className="rounded-[24px] bg-white p-6 shadow-[0_15px_38px_rgba(0,0,0,0.06)] transition hover:-translate-y-1 hover:shadow-[0_22px_44px_rgba(0,0,0,0.1)]"
               >
-                <p className="font-medium text-gray-800">{service}</p>
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#D60000]/15 to-[#D60000]/5">
+                  <Icon size={22} className="text-[#D60000]" strokeWidth={2.2} />
+                </div>
+                <p className="font-medium text-gray-800">{service.label}</p>
               </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </div>

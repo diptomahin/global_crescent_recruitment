@@ -4,6 +4,7 @@ import { Menu } from 'lucide-react'
 import useAos from '../../hooks/useAos'
 
 const navItems = [
+  { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
   { label: 'Our Approach', href: '/our-approach' },
   { label: 'Employers', href: '/employers' },
@@ -48,7 +49,7 @@ export default function SiteNavbar() {
             <img
               src="/Global-Crescent-recruitment-Ltd-PNG.png"
               alt="Global Crescent Recruitment"
-              className="h-10 w-10 object-contain"
+              className="h-15 w-15 object-contain"
             />
             <div className="hidden sm:block">
               <p className="text-sm font-bold leading-3 text-[#D60000]">Global Crescent</p>

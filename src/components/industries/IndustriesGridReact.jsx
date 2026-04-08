@@ -33,7 +33,7 @@ export default function IndustriesGridReact() {
   useAos()
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-[linear-gradient(180deg,#f5efe8_0%,#ffffff_100%)] py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center" data-aos="fade-up">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Sector expertise across multiple hiring environments</h2>

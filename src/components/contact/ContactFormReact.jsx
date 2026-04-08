@@ -103,7 +103,7 @@ export default function ContactFormReact() {
         <form onSubmit={handleSubmit} data-aos="fade-left" className="space-y-5 rounded-[32px] border border-gray-200 bg-white p-8 shadow-[0_18px_48px_rgba(0,0,0,0.08)]">
           <div>
             <label htmlFor="inquiryType" className="mb-2 block font-medium text-gray-900">Inquiry Type *</label>
-            <select id="inquiryType" name="inquiryType" value={formData.inquiryType} onChange={handleChange} required className="w-full rounded-lg border border-gray-300 px-4 py-3">
+            <select id="inquiryType" name="inquiryType" value={formData.inquiryType} onChange={handleChange} required className="w-full rounded-lg border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-2 focus:ring-[#D60000] focus:ring-offset-2">
               <option value="">Select inquiry type...</option>
               <option value="Employer">I&apos;m an Employer</option>
               <option value="Worker">I&apos;m a Worker</option>
@@ -112,25 +112,25 @@ export default function ContactFormReact() {
           </div>
           <div>
             <label htmlFor="fullName" className="mb-2 block font-medium text-gray-900">Full Name *</label>
-            <input id="fullName" name="fullName" value={formData.fullName} onChange={handleChange} required className="w-full rounded-lg border border-gray-300 px-4 py-3" />
+            <input id="fullName" name="fullName" value={formData.fullName} onChange={handleChange} required className="w-full rounded-lg border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-2 focus:ring-[#D60000] focus:ring-offset-2" />
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
             <div>
               <label htmlFor="email" className="mb-2 block font-medium text-gray-900">Email *</label>
-              <input id="email" type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full rounded-lg border border-gray-300 px-4 py-3" />
+              <input id="email" type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full rounded-lg border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-2 focus:ring-[#D60000] focus:ring-offset-2" />
             </div>
             <div>
               <label htmlFor="phone" className="mb-2 block font-medium text-gray-900">Phone *</label>
-              <input id="phone" name="phone" value={formData.phone} onChange={handleChange} required className="w-full rounded-lg border border-gray-300 px-4 py-3" />
+              <input id="phone" name="phone" value={formData.phone} onChange={handleChange} required className="w-full rounded-lg border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-2 focus:ring-[#D60000] focus:ring-offset-2" />
             </div>
           </div>
           <div>
             <label htmlFor="company" className="mb-2 block font-medium text-gray-900">Company / Organization</label>
-            <input id="company" name="company" value={formData.company} onChange={handleChange} className="w-full rounded-lg border border-gray-300 px-4 py-3" />
+            <input id="company" name="company" value={formData.company} onChange={handleChange} className="w-full rounded-lg border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-2 focus:ring-[#D60000] focus:ring-offset-2" />
           </div>
           <div>
             <label htmlFor="subject" className="mb-2 block font-medium text-gray-900">Subject *</label>
-            <select id="subject" name="subject" value={formData.subject} onChange={handleChange} required className="w-full rounded-lg border border-gray-300 px-4 py-3">
+            <select id="subject" name="subject" value={formData.subject} onChange={handleChange} required className="w-full rounded-lg border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-2 focus:ring-[#D60000] focus:ring-offset-2">
               <option value="">Select a subject...</option>
               <option value="Recruitment Services">Recruitment Services</option>
               <option value="Job Inquiry">Job Inquiry</option>
@@ -140,9 +140,9 @@ export default function ContactFormReact() {
           </div>
           <div>
             <label htmlFor="message" className="mb-2 block font-medium text-gray-900">Message *</label>
-            <textarea id="message" name="message" rows="5" value={formData.message} onChange={handleChange} required className="w-full rounded-lg border border-gray-300 px-4 py-3" />
+            <textarea id="message" name="message" rows="5" value={formData.message} onChange={handleChange} required className="w-full rounded-lg border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-2 focus:ring-[#D60000] focus:ring-offset-2" />
           </div>
-          <button type="submit" disabled={isLoading} className="w-full rounded-xl bg-gradient-to-r from-[#D60000] to-[#9B0000] px-6 py-4 font-semibold text-white shadow-[0_14px_35px_rgba(214,0,0,0.22)] transition hover:-translate-y-0.5 disabled:opacity-60">
+          <button type="submit" disabled={isLoading} className="w-full rounded-xl bg-gradient-to-r from-[#D60000] to-[#9B0000] px-6 py-4 font-semibold text-white shadow-[0_14px_35px_rgba(214,0,0,0.22)] transition hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#D60000] focus:ring-offset-2 disabled:opacity-60">
             {isLoading ? 'Sending...' : 'Send Message'}
           </button>
         </form>

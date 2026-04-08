@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 import useAos from '../../hooks/useAos'
 
 export default function ContactCarousel() {
@@ -93,19 +94,19 @@ export default function ContactCarousel() {
           onClick={prevSlide}
           onMouseEnter={() => setAutoplay(false)}
           onMouseLeave={() => setAutoplay(true)}
-          className="absolute left-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/30 p-3 text-white transition hover:bg-white/60"
+          className="absolute left-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/30 p-3 text-white transition hover:bg-white/60 focus:outline-none focus:ring-2 focus:ring-[#D60000] focus:ring-offset-2 focus:ring-offset-black"
           aria-label="Previous slide"
         >
-          &#10094;
+          <ChevronLeft size={24} />
         </button>
         <button
           onClick={nextSlide}
           onMouseEnter={() => setAutoplay(false)}
           onMouseLeave={() => setAutoplay(true)}
-          className="absolute right-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/30 p-3 text-white transition hover:bg-white/60"
+          className="absolute right-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/30 p-3 text-white transition hover:bg-white/60 focus:outline-none focus:ring-2 focus:ring-[#D60000] focus:ring-offset-2 focus:ring-offset-black"
           aria-label="Next slide"
         >
-          &#10095;
+          <ChevronRight size={24} />
         </button>
 
         <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 gap-3">
@@ -113,12 +114,13 @@ export default function ContactCarousel() {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition ${
+              className={`rounded-full transition focus:outline-none focus:ring-2 focus:ring-[#D60000] focus:ring-offset-2 focus:ring-offset-black ${
                 index === currentSlide
-                  ? 'bg-[#D60000] w-8'
-                  : 'bg-white/50 hover:bg-white/75'
+                  ? 'bg-[#D60000] w-8 h-3'
+                  : 'bg-white/50 hover:bg-white/75 w-3 h-3'
               }`}
               aria-label={`Go to slide ${index + 1}`}
+              aria-current={index === currentSlide ? 'true' : 'false'}
             />
           ))}
         </div>

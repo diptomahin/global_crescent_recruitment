@@ -2,8 +2,7 @@ import WorkersHeroReact from '../components/workers/WorkersHeroReact'
 import WorkersOpportunitiesReact from '../components/workers/WorkersOpportunitiesReact'
 import WorkersProcessReact from '../components/workers/WorkersProcessReact'
 import WorkersGrowthReact from '../components/workers/WorkersGrowthReact'
-import WorkersTestimonialsReact from '../components/workers/WorkersTestimonialsReact'
-
+import HomeCTAReact from '../components/home/HomeCTAReact'
 export default function Workers() {
   return (
     <>
@@ -11,7 +10,7 @@ export default function Workers() {
       <WorkersOpportunitiesReact />
       <WorkersProcessReact />
       <WorkersGrowthReact />
-      <WorkersTestimonialsReact />
+      <HomeCTAReact/>
     </>
   )
 }
