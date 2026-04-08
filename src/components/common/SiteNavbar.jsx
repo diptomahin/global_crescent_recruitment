@@ -49,9 +49,9 @@ export default function SiteNavbar() {
             <img
               src="/Global-Crescent-recruitment-Ltd-PNG.png"
               alt="Global Crescent Recruitment"
-              className="h-15 w-15 object-contain"
+              className="h-16 w-16 sm:h-14 sm:w-14 object-contain"
             />
-            <div className="hidden sm:block">
+            <div>
               <p className="text-sm font-bold leading-3 text-[#D60000]">Global Crescent</p>
               <p className="text-xs text-[#C0C0C0]">Recruitment</p>
             </div>

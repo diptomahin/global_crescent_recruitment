@@ -5,6 +5,7 @@ import WhatsAppButton from './components/common/WhatsAppButton'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Apply from './pages/Apply'
 import Employers from './pages/Employers'
 import Workers from './pages/Workers'
 import Industries from './pages/Industries'
@@ -20,6 +21,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/apply" element={<Apply />} />
             <Route path="/employers" element={<Employers />} />
             <Route path="/workers" element={<Workers />} />
             <Route path="/industries" element={<Industries />} />

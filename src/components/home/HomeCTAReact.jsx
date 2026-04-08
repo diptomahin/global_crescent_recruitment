@@ -15,7 +15,7 @@ export default function HomeCTAReact() {
           Whether you are building teams or looking for overseas opportunities, we can help you take the next step with a practical plan.
         </p>
         <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-          <Link to="/contact" className="rounded-xl bg-white px-8 py-4 font-semibold text-[#D60000] shadow-[0_14px_35px_rgba(255,255,255,0.25)] transition hover:-translate-y-0.5 hover:bg-gray-100">
+          <Link to="/apply" className="rounded-xl bg-white px-8 py-4 font-semibold text-[#D60000] shadow-[0_14px_35px_rgba(255,255,255,0.25)] transition hover:-translate-y-0.5 hover:bg-gray-100">
             Contact Our Team
           </Link>
           <Link to="/our-approach" className="rounded-xl border border-white/40 bg-white/6 px-8 py-4 font-semibold transition hover:-translate-y-0.5 hover:bg-white/10">

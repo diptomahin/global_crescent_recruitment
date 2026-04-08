@@ -3,21 +3,35 @@ import { Earth, MapPinned } from 'lucide-react'
 
 const countries = [
   { name: 'Albania', code: 'al' },
+  { name: 'Austria', code: 'at' },
+  { name: 'Belgium', code: 'be' },
   { name: 'Bosnia', code: 'ba' },
   { name: 'Bulgaria', code: 'bg' },
+  { name: 'Croatia', code: 'hr' },
+  { name: 'Cyprus', code: 'cy' },
+  { name: 'Czech Republic', code: 'cz' },
+  { name: 'Denmark', code: 'dk' },
+  { name: 'Estonia', code: 'ee' },
+  { name: 'Finland', code: 'fi' },
+  { name: 'France', code: 'fr' },
   { name: 'Germany', code: 'de' },
   { name: 'Greece', code: 'gr' },
   { name: 'Hungary', code: 'hu' },
+  { name: 'Ireland', code: 'ie' },
+  { name: 'Italy', code: 'it' },
+  { name: 'Latvia', code: 'lv' },
+  { name: 'Lithuania', code: 'lt' },
+  { name: 'Luxembourg', code: 'lu' },
+  { name: 'Malta', code: 'mt' },
+  { name: 'Netherlands', code: 'nl' },
+  { name: 'Poland', code: 'pl' },
+  { name: 'Portugal', code: 'pt' },
   { name: 'Romania', code: 'ro' },
-  { name: 'Croatia', code: 'hr' },
-  { name: 'UAE', code: 'ae' },
-  { name: 'Qatar', code: 'qa' },
-  { name: 'Oman', code: 'om' },
-  { name: 'India', code: 'in' },
-  { name: 'Bangladesh', code: 'bd' },
-  { name: 'Nepal', code: 'np' },
-  { name: 'Sri Lanka', code: 'lk' },
-  { name: 'Malaysia', code: 'my' },
+  { name: 'Slovakia', code: 'sk' },
+  { name: 'Slovenia', code: 'si' },
+  { name: 'Spain', code: 'es' },
+  { name: 'Sweden', code: 'se' },
+  { name: 'China', code: 'cn' },
 ]
 
 export default function HomeCountriesReact() {
@@ -38,10 +52,10 @@ export default function HomeCountriesReact() {
             Regional Reach
           </div>
           <h2 className="text-3xl font-bold sm:text-4xl">
-            A Network That Spans Regions
+            EU & China Recruitment Network
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-white/80">
-            Our recruitment reach helps employers scale across borders and helps candidates connect with credible openings in multiple markets.
+            Our recruitment reach spans across all EU member states and China, helping employers scale across borders and helping candidates connect with credible openings in multiple markets.
           </p>
         </div>
 

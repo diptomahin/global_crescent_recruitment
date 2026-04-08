@@ -19,7 +19,7 @@ const contactEndpoint = rawApiBase
     : `${rawApiBase}/api/contact`
   : '/api/contact'
 
-export default function ContactFormReact() {
+export default function ApplyFormReact() {
   useAos()
 
   const [formData, setFormData] = useState(initialFormData)
@@ -52,8 +52,8 @@ export default function ContactFormReact() {
 
       await Swal.fire({
         icon: 'success',
-        title: 'Message sent',
-        text: data.message || 'Your inquiry has been submitted successfully.',
+        title: 'Application sent',
+        text: data.message || 'Your application has been submitted successfully.',
         confirmButtonColor: '#D60000',
       })
 
@@ -61,7 +61,7 @@ export default function ContactFormReact() {
     } catch (error) {
       await Swal.fire({
         icon: 'error',
-        title: 'Unable to send message',
+        title: 'Unable to send application',
         text: error.message || 'Please try again later.',
         confirmButtonColor: '#D60000',
       })
@@ -73,12 +73,12 @@ export default function ContactFormReact() {
   return (
     <section className="bg-[linear-gradient(180deg,#ffffff_0%,#f6f0ea_100%)] py-20">
       <div className="px-4 sm:px-6 lg:px-8">
-        {/* Contact Info Section - Top on all screens */}
+        {/* Application Info Section - Top on all screens */}
         <div data-aos="fade-up" className="mb-16">
           <div className="mb-5 inline-flex rounded-full border border-[#D60000]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#D60000] shadow-sm">
-            Contact Desk
+            Application
           </div>
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">Get in Touch</h2>
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">Submit Your Application</h2>
           
           <div className="grid gap-5 md:grid-cols-3">
             <div className="rounded-[24px] bg-white p-5 shadow-[0_14px_34px_rgba(0,0,0,0.05)]">
@@ -98,13 +98,13 @@ export default function ContactFormReact() {
             </div>
           </div>
         </div>
-
-        {/* Contact Form Section */}
-        <div id="contact-form" className="grid gap-12 ">
+ 
+        {/* Application Form Section */}
+        <div id="apply-form" className="grid gap-12 ">
           <div data-aos="fade-right">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Start the conversation</h3>
+            <h3 className="text-2xl mt-5 font-bold text-gray-900 mb-4">Contact Us</h3>
             <p className="text-gray-600">
-              Tell us whether you are hiring, applying, or exploring a partnership. We will route your inquiry to the right team.
+              Tell us about your experience and what opportunities you are interested in. We will review your application and get back to you soon.
             </p>
           </div>
 
@@ -151,7 +151,7 @@ export default function ContactFormReact() {
             <textarea id="message" name="message" rows="5" value={formData.message} onChange={handleChange} required className="w-full rounded-lg border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-2 focus:ring-[#D60000] focus:ring-offset-2" />
           </div>
           <button type="submit" disabled={isLoading} className="w-full rounded-xl bg-gradient-to-r from-[#D60000] to-[#9B0000] px-6 py-4 font-semibold text-white shadow-[0_14px_35px_rgba(214,0,0,0.22)] transition hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#D60000] focus:ring-offset-2 disabled:opacity-60">
-            {isLoading ? 'Sending...' : 'Send Message'}
+            {isLoading ? 'Submitting...' : 'Submit Application'}
           </button>
         </form>
         </div>

@@ -14,6 +14,10 @@ const quickLinks = [
 export default function SiteFooter() {
   useAos({ duration: 700 })
 
+  const handleNavClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-gradient-to-r from-[#0A0A0A] to-[#2B2B2B] pb-8 pt-12 text-white sm:pt-16">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
@@ -54,7 +58,7 @@ export default function SiteFooter() {
           <ul className="space-y-2 text-sm">
             {quickLinks.map((item) => (
               <li key={item.href}>
-                <Link to={item.href} className="text-white/80 transition hover:text-red-300">
+                <Link to={item.href} onClick={handleNavClick} className="text-white/80 transition hover:text-red-300">
                   {item.label}
                 </Link>
               </li>
@@ -66,8 +70,8 @@ export default function SiteFooter() {
           <h3 className="mb-4 text-lg font-bold">Offices</h3>
           <ul className="space-y-2 text-sm text-white/80">
             <li>Shenzhen, China</li>
-            <li>Gazipur, Bangladesh</li>
-            <li>Serving Europe, Asia, and the Middle East</li>
+            <li>Pan-European Coverage</li>
+            <li>Serving EU & China Markets</li>
           </ul>
         </div>
       </div>

@@ -10,6 +10,10 @@ export default function Footer() {
     AOS.init({ duration: 800, once: true });
   }, []);
 
+  const handleNavClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-gradient-to-r from-[#0A0A0A] to-[#2B2B2B] text-white pt-12 sm:pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,37 +100,37 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4">Important Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="hover:text-red-300 transition">
+                <Link href="/" onClick={handleNavClick} className="hover:text-red-300 transition">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-red-300 transition">
+                <Link href="/about" onClick={handleNavClick} className="hover:text-red-300 transition">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-red-300 transition">
+                <Link href="/contact" onClick={handleNavClick} className="hover:text-red-300 transition">
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link href="/employers" className="hover:text-red-300 transition">
+                <Link href="/employers" onClick={handleNavClick} className="hover:text-red-300 transition">
                   For Employers
                 </Link>
               </li>
               <li>
-                <Link href="/workers" className="hover:text-red-300 transition">
+                <Link href="/workers" onClick={handleNavClick} className="hover:text-red-300 transition">
                   For Workers
                 </Link>
               </li>
               <li>
-                <Link href="/industries" className="hover:text-red-300 transition">
+                <Link href="/industries" onClick={handleNavClick} className="hover:text-red-300 transition">
                   Industries We Serve
                 </Link>
               </li>
               <li>
-                <Link href="/our-approach" className="hover:text-red-300 transition">
+                <Link href="/our-approach" onClick={handleNavClick} className="hover:text-red-300 transition">
                   Our Approach
                 </Link>
               </li>

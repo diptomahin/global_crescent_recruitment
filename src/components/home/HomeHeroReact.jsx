@@ -66,15 +66,14 @@ export default function HomeHeroReact() {
               <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
                 <div>
                   <p className="text-xs uppercase tracking-[0.3em] text-[#6f6f6f]">Coverage Map</p>
-                  <p className="mt-3 text-4xl font-bold text-[#111111]">15+ regions active</p>
+                  <p className="mt-3 text-4xl font-bold text-[#111111]">30 countries active</p>
                   <p className="mt-3 max-w-lg text-sm text-[#4f4f4f]">
-                    Serving Europe, Asia, and the Middle East with stronger coordination between employer demand and worker readiness.
+                    Serving across all EU member states and China with comprehensive recruitment coverage and local expertise in every region.
                   </p>
                 </div>
-                <div className="grid grid-cols-3 gap-2 text-center text-xs font-semibold text-[#5a5a5a]">
+                <div className="grid grid-cols-2 gap-2 text-center text-xs font-semibold text-[#5a5a5a]">
                   <div className="rounded-xl bg-white px-3 py-3 shadow-sm">EU</div>
-                  <div className="rounded-xl bg-white px-3 py-3 shadow-sm">GCC</div>
-                  <div className="rounded-xl bg-white px-3 py-3 shadow-sm">Asia</div>
+                  <div className="rounded-xl bg-white px-3 py-3 shadow-sm">China</div>
                 </div>
               </div>
             </div>

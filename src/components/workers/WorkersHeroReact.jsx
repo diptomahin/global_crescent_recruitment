@@ -17,7 +17,7 @@ export default function WorkersHeroReact() {
             We connect workers and partner agencies with employers across multiple sectors while supporting the process from inquiry to placement.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <Link to="/contact" className="rounded-xl bg-gradient-to-r from-[#D60000] to-[#9B0000] px-8 py-4 text-center font-semibold shadow-[0_16px_45px_rgba(214,0,0,0.35)] transition hover:-translate-y-0.5">
+            <Link to="/apply" className="rounded-xl bg-gradient-to-r from-[#D60000] to-[#9B0000] px-8 py-4 text-center font-semibold shadow-[0_16px_45px_rgba(214,0,0,0.35)] transition hover:-translate-y-0.5">
               Apply Now
             </Link>
             <a href="#worker-opportunities" className="rounded-xl border border-white/30 bg-white/5 px-8 py-4 text-center font-semibold backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/10">

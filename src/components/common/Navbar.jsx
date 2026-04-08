@@ -42,18 +42,18 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition">
-            <div className="relative h-10 w-10">
+            <div className="relative h-14 w-14 sm:h-12 sm:w-12">
               <Image
                 src="/Global-Crescent-recruitment-Ltd-PNG.png"
                 alt="Global Crescent Logo"
                 fill
                 className="object-contain"
-                sizes="40px"
+                sizes="56px"
               />
             </div>
-            <div className="hidden sm:block">
-              <p className="text-[#D60000] font-bold text-sm leading-3">Global Crescent</p>
-              <p className="text-[#C0C0C0] text-xs">Recruitment</p>
+            <div>
+              <p className="text-[#D60000] font-bold text-sm sm:text-sm leading-3">Global Crescent</p>
+              <p className="text-[#C0C0C0] text-xs leading-2">Recruitment</p>
             </div>
           </Link>
 
