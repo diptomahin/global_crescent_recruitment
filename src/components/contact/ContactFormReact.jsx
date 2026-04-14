@@ -93,7 +93,6 @@ export default function ContactFormReact() {
               <h3 className="font-semibold text-white mb-2">Contact Information</h3>
               <p className="text-white/80 text-sm">Info@gcrecruitmentltd.com</p>
               <p className="text-white/80 text-sm">Support@gcrecruitmentltd.com</p>
-              <p className="text-white/80 text-sm">+387 62 012 295</p>
               <p className="text-white/80 text-sm">+44 7493 478440</p>
             </div>
           </div>
@@ -108,7 +107,7 @@ export default function ContactFormReact() {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} data-aos="fade-left" className="space-y-5 rounded-[32px] border border-gray-200 bg-white p-8 shadow-[0_18px_48px_rgba(0,0,0,0.08)]">
+          <form onSubmit={handleSubmit} data-aos="fade-left" className="space-y-5 rounded-[32px] border-2 border-[#D60000] bg-white p-8 shadow-[0_24px_60px_rgba(0,0,0,0.12)]">
           <div>
             <label htmlFor="inquiryType" className="mb-2 block font-medium text-gray-900">Inquiry Type *</label>
             <select id="inquiryType" name="inquiryType" value={formData.inquiryType} onChange={handleChange} required className="w-full rounded-lg border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-2 focus:ring-[#D60000] focus:ring-offset-2">

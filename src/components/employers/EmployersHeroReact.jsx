@@ -1,13 +1,28 @@
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import useAos from '../../hooks/useAos'
+
+const CountUpNumber = ({ end, suffix = '' }) => {
+  const [count, setCount] = useState(0)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount(prev => {
+        const increment = Math.ceil(end / 100)
+        return prev + increment >= end ? end : prev + increment
+      })
+    }, 20)
+    return () => clearInterval(interval)
+  }, [end])
+  return <>{count}{suffix}</>
+}
 
 export default function EmployersHeroReact() {
   useAos()
 
   return (
-    <section className="relative overflow-hidden bg-[radial-gradient(circle_at_15%_20%,_rgba(214,0,0,0.23),_transparent_24%),radial-gradient(circle_at_85%_10%,_rgba(255,255,255,0.08),_transparent_20%),linear-gradient(135deg,#080808_0%,#131313_45%,#1f2a21_100%)] pt-24 text-white md:pt-20">
+    <section className="relative min-h-screen pt-24 overflow-hidden bg-[radial-gradient(circle_at_15%_20%,_rgba(214,0,0,0.23),_transparent_24%),radial-gradient(circle_at_85%_10%,_rgba(255,255,255,0.08),_transparent_20%),linear-gradient(135deg,#080808_0%,#131313_45%,#1f2a21_100%)] flex items-center text-white">
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:68px_68px] opacity-20" />
-      <div className="relative mx-auto grid max-w-7xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[1.04fr_0.96fr] lg:px-8">
+      <div className="relative mx-auto grid max-w-7xl gap-8 px-4 py-8 sm:px-6 lg:grid-cols-[1.04fr_0.96fr] lg:px-8">
         <div data-aos="fade-right">
           <span className="rounded-full bg-[#D60000]/20 px-4 py-2 text-sm font-semibold text-[#ff7a7a]">FOR EMPLOYERS</span>
           <h1 className="mt-6 text-4xl font-bold leading-tight sm:text-5xl">
@@ -34,11 +49,11 @@ export default function EmployersHeroReact() {
         </div>
         <div className="grid gap-4 sm:grid-cols-2" data-aos="fade-left">
           <div className="rounded-[28px] border border-white/10 bg-white/10 p-6 backdrop-blur-xl shadow-[0_18px_50px_rgba(0,0,0,0.26)]">
-            <p className="text-4xl font-bold text-[#D60000]">70%</p>
+            <p className="text-4xl font-bold text-white"><CountUpNumber end={70} suffix="%" /></p>
             <p className="mt-2 text-white/80">Potential reduction in time-to-hire through structured sourcing.</p>
           </div>
-          <div className="rounded-[28px] border border-white/10 bg-gradient-to-br from-white/12 to-[#D60000]/12 p-6 backdrop-blur-xl shadow-[0_18px_50px_rgba(0,0,0,0.26)]">
-            <p className="text-4xl font-bold text-[#D60000]">95%</p>
+          <div className="rounded-[28px] border border-white/10 bg-white/10 p-6 backdrop-blur-xl shadow-[0_18px_50px_rgba(0,0,0,0.26)]">
+            <p className="text-4xl font-bold text-white"><CountUpNumber end={95} suffix="%" /></p>
             <p className="mt-2 text-white/80">Retention-oriented matching built around readiness and fit.</p>
           </div>
           <div className="rounded-[30px] border border-white/10 bg-[#f4f1ea] p-7 text-[#111111] shadow-[0_22px_55px_rgba(0,0,0,0.3)] sm:col-span-2">

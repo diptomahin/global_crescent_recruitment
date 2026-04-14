@@ -10,27 +10,27 @@ export default function HomeCarousel() {
 
   const slides = [
     {
-      image: '/images/employment1.webp',
+      image: '/images/arlington-research-kN_kViDchA0-unsplash.jpg',
       alt: 'Professional Team Meeting',
       title: 'Build Your Dream Team',
     },
     {
-      image: '/images/employment2.webp',
+      image: '/images/israel-andrade-YI_9SivVt_s-unsplash.jpg',
       alt: 'Global Recruitment Network',
       title: 'Connect Globally, Hire Locally',
     },
     {
-      image: '/images/employment3.webp',
+      image: '/images/lycs-architecture-U2BI3GMnSSE-unsplash.jpg',
       alt: 'Diverse Workforce',
       title: 'Diversity Drives Innovation',
     },
     {
-      image: '/images/employment1.webp',
+      image: '/images/arlington-research-kN_kViDchA0-unsplash.jpg',
       alt: 'Business Growth',
       title: 'Scale Your Business',
     },
     {
-      image: '/images/employment2.webp',
+      image: '/images/israel-andrade-YI_9SivVt_s-unsplash.jpg',
       alt: 'Career Opportunities',
       title: 'Unlock Opportunities',
     },

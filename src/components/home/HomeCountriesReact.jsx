@@ -2,35 +2,11 @@ import useAos from '../../hooks/useAos'
 import { Earth, MapPinned } from 'lucide-react'
 
 const countries = [
-  { name: 'Albania', code: 'al' },
-  { name: 'Austria', code: 'at' },
-  { name: 'Belgium', code: 'be' },
-  { name: 'Bosnia', code: 'ba' },
-  { name: 'Bulgaria', code: 'bg' },
-  { name: 'Croatia', code: 'hr' },
-  { name: 'Cyprus', code: 'cy' },
-  { name: 'Czech Republic', code: 'cz' },
-  { name: 'Denmark', code: 'dk' },
-  { name: 'Estonia', code: 'ee' },
-  { name: 'Finland', code: 'fi' },
-  { name: 'France', code: 'fr' },
-  { name: 'Germany', code: 'de' },
-  { name: 'Greece', code: 'gr' },
-  { name: 'Hungary', code: 'hu' },
-  { name: 'Ireland', code: 'ie' },
-  { name: 'Italy', code: 'it' },
-  { name: 'Latvia', code: 'lv' },
-  { name: 'Lithuania', code: 'lt' },
-  { name: 'Luxembourg', code: 'lu' },
-  { name: 'Malta', code: 'mt' },
-  { name: 'Netherlands', code: 'nl' },
-  { name: 'Poland', code: 'pl' },
-  { name: 'Portugal', code: 'pt' },
   { name: 'Romania', code: 'ro' },
-  { name: 'Slovakia', code: 'sk' },
-  { name: 'Slovenia', code: 'si' },
-  { name: 'Spain', code: 'es' },
-  { name: 'Sweden', code: 'se' },
+  { name: 'Croatia', code: 'hr' },
+  { name: 'Bulgaria', code: 'bg' },
+  { name: 'Schengen Area', code: 'eu', isGroup: true },
+  { name: 'Non-Schengen EU', code: 'eu', isGroup: true },
   { name: 'China', code: 'cn' },
 ]
 
@@ -49,34 +25,44 @@ export default function HomeCountriesReact() {
         <div className="mb-14 text-center" data-aos="fade-up">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white/75 backdrop-blur">
             <Earth size={14} />
-            Regional Reach
+            Where We Operate
           </div>
           <h2 className="text-3xl font-bold sm:text-4xl">
-            EU & China Recruitment Network
+            Europe & China
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-white/80">
-            Our recruitment reach spans across all EU member states and China, helping employers scale across borders and helping candidates connect with credible openings in multiple markets.
+            We connect employers and workers across European markets and China with localized expertise and compliance support.
           </p>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-3">
           {countries.map((country, index) => (
             <div
               key={country.name}
               data-aos="zoom-in"
               data-aos-delay={index * 35}
-              className="group rounded-2xl border border-white/10 bg-white/8 px-4 py-5 text-center text-sm font-medium text-white/90 backdrop-blur transition hover:-translate-y-1 hover:bg-white/14 hover:shadow-[0_18px_40px_rgba(0,0,0,0.22)]"
+              className={`group rounded-2xl border border-white/10 px-4 py-6 text-center text-sm font-medium backdrop-blur transition ${
+                country.isGroup
+                  ? 'bg-white/6 text-white/70 hover:bg-white/12'
+                  : 'bg-white/8 text-white/90 hover:-translate-y-1 hover:bg-white/14 hover:shadow-[0_18px_40px_rgba(0,0,0,0.22)]'
+              }`}
             >
-              {/* Flag */}
-              <img
-                src={`https://flagcdn.com/w40/${country.code}.png`}
-                alt={country.name}
-                className="mx-auto mb-3 h-6 w-8 rounded-sm object-cover shadow"
-              />
+              {/* Flag Image */}
+              <div className="mx-auto mb-4 h-12 w-16">
+                <img
+                  src={`https://flagcdn.com/h80/${country.code}.png`}
+                  alt={country.name}
+                  className="h-full w-full rounded-md object-cover shadow-md"
+                />
+              </div>
 
-              {/* Accent line */}
-              <div className="mx-auto mb-2 h-2 w-10 rounded-full bg-gradient-to-r from-[#D60000] to-emerald-400 opacity-80 transition group-hover:w-14" />
+              {!country.isGroup && (
+                <>
+                  {/* Accent line */}
+                  <div className="mx-auto mb-2 h-2 w-10 rounded-full bg-gradient-to-r from-[#D60000] to-emerald-400 opacity-80 transition group-hover:w-14" />
+                </>
+              )}
 
               <div className="flex items-center justify-center gap-2">
                 <MapPinned size={14} className="text-white/70" />

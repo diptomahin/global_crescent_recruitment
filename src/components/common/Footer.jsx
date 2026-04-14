@@ -20,23 +20,21 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
           {/* Logo & Contact */}
           <div data-aos="fade-up">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="relative h-20 w-20 flex-shrink-0">
+            <div className="mb-4">
+              <div className="relative h-24 w-56 flex-shrink-0">
                 <Image
-                  src="/Global-Crescent-recruitment-Ltd-PNG.png"
+                  src="/GCR-3.png"
                   alt="Global Crescent"
                   fill
                   className="object-contain"
-                  sizes="48px"
+                  sizes="224px"
                 />
               </div>
-              <p className="text-lg font-bold">Global Crescent <br /><span className='text-sm'>Recruitment Ltd</span></p>
             </div>
             
             <div className="space-y-2 text-sm">
               <p className="break-words">📧 Info@gcrecruitmentltd.com</p>
               <p className="break-words">📧 Support@gcrecruitmentltd.com</p>
-              <p>📱 +387 62 012 295</p>
               <p>📱 +44 7493 478440</p>
             </div>
             <div className="flex gap-3 mt-4 flex-wrap">

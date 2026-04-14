@@ -22,22 +22,16 @@ export default function SiteFooter() {
     <footer className="bg-gradient-to-r from-[#0A0A0A] to-[#2B2B2B] pb-8 pt-12 text-white sm:pt-16">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div data-aos="fade-up">
-          <div className="mb-4 flex items-center gap-3">
+          <div className="mb-4">
             <img
-              src="/Global-Crescent-recruitment-Ltd-PNG.png"
+              src="/GCR-3.png"
               alt="Global Crescent Recruitment"
-              className="h-16 w-16 object-contain"
+              className="h-20 w-56 object-contain"
             />
-            <p className="text-lg font-bold leading-6">
-              Global Crescent
-              <br />
-              <span className="text-sm font-medium text-white/80">Recruitment Ltd</span>
-            </p>
           </div>
           <div className="space-y-2 text-sm text-white/80">
             <p>Info@gcrecruitmentltd.com</p>
             <p>Support@gcrecruitmentltd.com</p>
-            <p>+387 62 012 295</p>
             <p>+44 7493 478440</p>
           </div>
         </div>

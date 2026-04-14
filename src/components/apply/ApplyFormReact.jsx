@@ -21,7 +21,7 @@ const contactEndpoint = rawApiBase
 
 export default function ApplyFormReact() {
   useAos()
-
+  
   const [formData, setFormData] = useState(initialFormData)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -72,43 +72,23 @@ export default function ApplyFormReact() {
 
   return (
     <section className="bg-[linear-gradient(180deg,#ffffff_0%,#f6f0ea_100%)] py-20">
-      <div className="px-4 sm:px-6 lg:px-8">
-        {/* Application Info Section - Top on all screens */}
-        <div data-aos="fade-up" className="mb-16">
-          <div className="mb-5 inline-flex rounded-full border border-[#D60000]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#D60000] shadow-sm">
-            Application
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        {/* Title */}
+        <div className="mb-12 text-center" data-aos="fade-down">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#D60000]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#D60000] shadow-sm">
+            <span className="h-2 w-2 rounded-full bg-[#D60000]" />
+            Quick Application
           </div>
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">Submit Your Application</h2>
-          
-          <div className="grid gap-5 md:grid-cols-3">
-            <div className="rounded-[24px] bg-white p-5 shadow-[0_14px_34px_rgba(0,0,0,0.05)]">
-              <h3 className="font-semibold text-gray-900 mb-2">EU Office</h3>
-              <p className="text-gray-600">Serving all EU member states with regional recruitment coordination and local expertise</p>
-            </div>
-            <div className="rounded-[24px] bg-white p-5 shadow-[0_14px_34px_rgba(0,0,0,0.05)]">
-              <h3 className="font-semibold text-gray-900 mb-2">China Office</h3>
-              <p className="text-gray-600">22F, Building B, World Trade Plaza, No. 9, Fuhong Road, Shenzhen City, China</p>
-            </div>
-            <div className="rounded-[24px] bg-[linear-gradient(145deg,#101010_0%,#1d1d1d_100%)] p-5 text-white shadow-[0_18px_45px_rgba(0,0,0,0.12)]">
-              <h3 className="font-semibold text-white mb-2">Contact Information</h3>
-              <p className="text-white/80 text-sm">Info@gcrecruitmentltd.com</p>
-              <p className="text-white/80 text-sm">Support@gcrecruitmentltd.com</p>
-              <p className="text-white/80 text-sm">+387 62 012 295</p>
-              <p className="text-white/80 text-sm">+44 7493 478440</p>
-            </div>
-          </div>
+          <h1 className="text-4xl font-bold sm:text-5xl">
+            <span className="bg-gradient-to-r from-[#D60000] to-[#9B0000] bg-clip-text text-transparent">
+              Ready to Start?
+            </span>
+          </h1>
+          {/* <p className="mt-4 text-gray-600">Submit your application and let's explore opportunities together</p> */}
         </div>
- 
-        {/* Application Form Section */}
-        <div id="apply-form" className="grid gap-12 ">
-          <div data-aos="fade-right">
-            <h3 className="text-2xl mt-5 font-bold text-gray-900 mb-4">Contact Us</h3>
-            <p className="text-gray-600">
-              Tell us about your experience and what opportunities you are interested in. We will review your application and get back to you soon.
-            </p>
-          </div>
 
-          <form onSubmit={handleSubmit} data-aos="fade-left" className="space-y-5 rounded-[32px] border border-gray-200 bg-white p-8 shadow-[0_18px_48px_rgba(0,0,0,0.08)]">
+        {/* Form */}
+        <form onSubmit={handleSubmit} data-aos="zoom-in" data-aos-delay="200" className="space-y-5 rounded-[32px] border-2 border-[#D60000] bg-white p-8 shadow-[0_24px_60px_rgba(0,0,0,0.12)]">
           <div>
             <label htmlFor="inquiryType" className="mb-2 block font-medium text-gray-900">Inquiry Type *</label>
             <select id="inquiryType" name="inquiryType" value={formData.inquiryType} onChange={handleChange} required className="w-full rounded-lg border border-gray-300 px-4 py-3 transition focus:outline-none focus:ring-2 focus:ring-[#D60000] focus:ring-offset-2">
@@ -154,7 +134,6 @@ export default function ApplyFormReact() {
             {isLoading ? 'Submitting...' : 'Submit Application'}
           </button>
         </form>
-        </div>
       </div>
     </section>
   )

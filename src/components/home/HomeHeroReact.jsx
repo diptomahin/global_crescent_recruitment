@@ -1,5 +1,27 @@
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import useAos from '../../hooks/useAos'
+
+const CountUpNumber = ({ target }) => {
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    let start = 0
+    const increment = target / 100
+    const timer = setInterval(() => {
+      start += increment
+      if (start >= target) {
+        setCount(target)
+        clearInterval(timer)
+      } else {
+        setCount(Math.floor(start))
+      }
+    }, 20)
+    return () => clearInterval(timer)
+  }, [target])
+
+  return <span>{count}</span>
+}
 
 export default function HomeHeroReact() {
   useAos()
@@ -54,27 +76,26 @@ export default function HomeHeroReact() {
           <div className="grid gap-4 sm:grid-cols-2" data-aos="fade-left">
             <div className="rounded-[28px] border border-white/12 bg-white/10 p-6 backdrop-blur-xl shadow-[0_22px_60px_rgba(0,0,0,0.35)] sm:translate-y-6">
               <p className="text-xs uppercase tracking-[0.3em] text-white/55">Placed Talent</p>
-              <p className="mt-3 text-4xl font-bold text-[#ff6b6b]">1300+</p>
+              <p className="mt-3 text-4xl font-bold text-[#ff6b6b]"><CountUpNumber target={1300} />+</p>
               <p className="mt-3 text-sm text-white/80">Successful worker placements across multiple sectors.</p>
             </div>
             <div className="rounded-[28px] border border-white/12 bg-gradient-to-br from-[#d60000]/25 to-white/8 p-6 backdrop-blur-xl shadow-[0_22px_60px_rgba(0,0,0,0.35)]">
               <p className="text-xs uppercase tracking-[0.3em] text-white/55">Employers Served</p>
-              <p className="mt-3 text-4xl font-bold text-white">200+</p>
+              <p className="mt-3 text-4xl font-bold text-white"><CountUpNumber target={200} />+</p>
               <p className="mt-3 text-sm text-white/82">Employers supported with sourcing, screening, and onboarding.</p>
             </div>
             <div className="rounded-[30px] border border-white/12 bg-[#f4f1eb] p-7 text-[#111111] shadow-[0_24px_60px_rgba(0,0,0,0.35)] sm:col-span-2">
               <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.3em] text-[#6f6f6f]">Coverage Map</p>
-                  <p className="mt-3 text-4xl font-bold text-[#111111]">30 countries active</p>
+                  <p className="text-xs uppercase tracking-[0.3em] text-[#6f6f6f]">Coverage</p>
+                  <p className="mt-3 text-4xl font-bold text-[#111111]">EU Focused</p>
                   <p className="mt-3 max-w-lg text-sm text-[#4f4f4f]">
-                    Serving across all EU member states and China with comprehensive recruitment coverage and local expertise in every region.
+                    Serving across all EU member states with comprehensive recruitment coverage, local compliance expertise, and dedicated support.
                   </p>
                 </div>
-                <div className="grid grid-cols-2 gap-2 text-center text-xs font-semibold text-[#5a5a5a]">
-                  <div className="rounded-xl bg-white px-3 py-3 shadow-sm">EU</div>
-                  <div className="rounded-xl bg-white px-3 py-3 shadow-sm">China</div>
-                </div>
+                {/* <div className="grid grid-cols-1 gap-2 text-center text-xs font-semibold text-[#5a5a5a]">
+                  <div className="rounded-xl bg-white px-3 py-3 shadow-sm">EU Only</div>
+                </div> */}
               </div>
             </div>
           </div>

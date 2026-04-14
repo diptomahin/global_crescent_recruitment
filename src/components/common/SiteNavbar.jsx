@@ -39,22 +39,18 @@ export default function SiteNavbar() {
     <nav
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-gradient-to-r from-[#1a4d2e] to-[#2d7a4a] py-2 shadow-2xl'
-          : 'bg-gradient-to-r from-[#2d7a4a] to-[#3d8f5a] py-4'
+          ? 'bg-white py-2 shadow-2xl'
+          : 'bg-white py-4'
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 transition hover:opacity-80" data-aos="fade-down">
+          <Link to="/" className="transition hover:opacity-80" data-aos="fade-down">
             <img
-              src="/Global-Crescent-recruitment-Ltd-PNG.png"
+              src="/GCR-3.png"
               alt="Global Crescent Recruitment"
-              className="h-16 w-16 sm:h-14 sm:w-14 object-contain"
+              className="h-20 w-48 sm:h-20 sm:w-56 object-contain"
             />
-            <div>
-              <p className="text-sm font-bold leading-3 text-[#D60000]">Global Crescent</p>
-              <p className="text-xs text-[#C0C0C0]">Recruitment</p>
-            </div>
           </Link>
 
           <div className="hidden items-center gap-8 lg:flex" data-aos="fade-down" data-aos-delay="80">
@@ -64,7 +60,7 @@ export default function SiteNavbar() {
                 to={item.href}
                 className={({ isActive }) =>
                   `group relative text-sm font-semibold transition-all duration-300 ${
-                    isActive ? 'text-white' : 'text-gray-100 hover:text-white'
+                    isActive ? 'text-gray-800' : 'text-gray-600 hover:text-gray-800'
                   }`
                 }
               >
@@ -85,7 +81,7 @@ export default function SiteNavbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen((open) => !open)}
-            className="rounded-md p-2 text-white transition hover:text-red-500 lg:hidden"
+            className="rounded-md p-2 text-gray-800 transition hover:text-red-500 lg:hidden"
             aria-label="Toggle navigation menu"
             aria-expanded={mobileMenuOpen}
             data-aos="fade-down"
@@ -95,23 +91,25 @@ export default function SiteNavbar() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="mt-4 border-t border-green-400 pb-4 lg:hidden">
-            <div className="mt-4 flex flex-col gap-3">
-              {navItems.map((item) => (
-                <NavLink
-                  key={item.href}
-                  to={item.href}
-                  className={({ isActive }) =>
-                    `rounded px-4 py-2 transition-all duration-300 ${
-                      isActive
-                        ? 'bg-red-600 font-bold text-white'
-                        : 'text-gray-100 hover:bg-green-500 hover:text-white'
-                    }`
-                  }
-                >
-                  {item.label}
-                </NavLink>
-              ))}
+          <div className="absolute left-0 right-0 mt-4 border-t border-gray-300 bg-white pb-4 shadow-lg lg:hidden">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="mt-4 flex flex-col gap-2">
+                {navItems.map((item) => (
+                  <NavLink
+                    key={item.href}
+                    to={item.href}
+                    className={({ isActive }) =>
+                      `rounded-lg px-4 py-3 transition-all duration-300 font-medium ${
+                        isActive
+                          ? 'bg-gradient-to-r from-[#D60000] to-[#9B0000] text-white'
+                          : 'text-gray-700 hover:bg-gray-100'
+                      }`
+                    }
+                  >
+                    {item.label}
+                  </NavLink>
+                ))}
+              </div>
             </div>
           </div>
         )}
