@@ -15,7 +15,7 @@ const CountUpNumber = ({ target }) => {
       } else {
         setCount(Math.floor(start))
       }
-    }, 20)
+    }, 80)
     return () => clearInterval(timer)
   }, [target])
 
@@ -30,7 +30,7 @@ export default function AboutHeroReact() {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:72px_72px] opacity-20" />
       <div className="relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
         <img
-          src="/GCR-3.png"
+          src="/gcr_logo.png"
           alt="Global Crescent Recruitment"
           className="mx-auto mb-8 h-24 w-72 object-contain"
         />

@@ -24,7 +24,7 @@ export default function SiteFooter() {
         <div data-aos="fade-up">
           <div className="mb-4">
             <img
-              src="/GCR-3.png"
+              src="/gcr_logo.png"
               alt="Global Crescent Recruitment"
               className="h-20 w-56 object-contain"
             />

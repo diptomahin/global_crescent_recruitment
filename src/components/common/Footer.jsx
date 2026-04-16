@@ -23,7 +23,7 @@ export default function Footer() {
             <div className="mb-4">
               <div className="relative h-24 w-56 flex-shrink-0">
                 <Image
-                  src="/GCR-3.png"
+                  src="/gcr_logo.png"
                   alt="Global Crescent"
                   fill
                   className="object-contain"

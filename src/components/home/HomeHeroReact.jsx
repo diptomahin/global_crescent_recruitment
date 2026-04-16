@@ -16,7 +16,7 @@ const CountUpNumber = ({ target }) => {
       } else {
         setCount(Math.floor(start))
       }
-    }, 20)
+    }, 80)
     return () => clearInterval(timer)
   }, [target])
 

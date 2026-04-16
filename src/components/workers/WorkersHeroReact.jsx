@@ -10,7 +10,7 @@ const CountUpNumber = ({ end, suffix = '' }) => {
         const increment = Math.ceil(end / 100)
         return prev + increment >= end ? end : prev + increment
       })
-    }, 20)
+    }, 80)
     return () => clearInterval(interval)
   }, [end])
   return <>{count}{suffix}</>

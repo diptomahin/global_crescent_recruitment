@@ -7,7 +7,7 @@ export default function Industries() {
     <>
       <IndustriesHeroReact />
       <IndustriesGridReact />
-      <IndustriesCarouselReact />
+      {/* <IndustriesCarouselReact /> */}
       <HomeCTAReact/>
     </>
   )
